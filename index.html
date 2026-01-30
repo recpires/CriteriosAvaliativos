@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Critérios Avaliativos 2026</title>
 
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="Santo André-horizontal.png">
 
     <style>
         :root {
@@ -35,7 +35,6 @@
             overflow: hidden;
         }
 
-        /* Topo */
         header {
             text-align: center;
             padding: 30px 20px;
@@ -63,7 +62,6 @@
             letter-spacing: 1px;
         }
 
-        /* Grid */
         .main-content {
             padding: 30px;
             display: grid;
@@ -81,7 +79,6 @@
             margin-top: 20px;
         }
 
-        /* Botão da Turma com Efeito Azul */
         .card-turma {
             background: white;
             border: 2px solid #e0e6ed;
@@ -94,9 +91,10 @@
             transition: all 0.3s ease;
             color: var(--blue-dark);
             font-weight: 600;
+            text-decoration: none;
+            /* Garante que não pareça um link comum */
         }
 
-        /* EFEITO HOVER */
         .card-turma:hover {
             background-color: var(--blue-dark);
             color: white;
@@ -106,34 +104,6 @@
 
         .icon {
             font-size: 1.2rem;
-        }
-
-        /* Painel de Informações (Expandir) */
-        .info-panel {
-            display: none;
-            grid-column: 1 / -1;
-            background: #f8fbff;
-            border-left: 5px solid var(--teal);
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin-top: -10px;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         @media (max-width: 650px) {
@@ -160,83 +130,50 @@
 
             <div class="category-label">ENSINO FUNDAMENTAL II</div>
 
-            <div class="card-turma" onclick="toggle('f6')">
-                <span>6º Ano</span> <span class="icon">📄</span>
-            </div>
-            <div id="f6" class="info-panel">
-                <strong>Atividade:</strong> Pontilhismo (Artes).<br>
-                <strong>Critérios:</strong> Organização (2,5), Técnica (2,5), Ocupação da folha (2,5) e Pintura (2,5).
+            <div class="card-turma" onclick="downloadPDF('6º ano 1bim 2026.pdf')">
+                <span>6º Ano</span> <span class="icon">📥</span>
             </div>
 
-            <div class="card-turma" onclick="toggle('f7')">
-                <span>7º Ano</span> <span class="icon">📄</span>
-            </div>
-            <div id="f7" class="info-panel">
-                <strong>Atividade:</strong> Construção de Vitral.<br>
-                <strong>Critérios:</strong> Uso de materiais (2,5), Acabamento (5,0) e Capricho (2,5).
+            <div class="card-turma" onclick="downloadPDF('7º ano 1bim 2026.pdf')">
+                <span>7º Ano</span> <span class="icon">📥</span>
             </div>
 
-            <div class="card-turma" onclick="toggle('f8')">
-                <span>8º Ano</span> <span class="icon">📄</span>
-            </div>
-            <div id="f8" class="info-panel">
-                <strong>Atividade:</strong> Cartaz dos Quatro Evangelhos.<br>
-                <strong>Critérios:</strong> Clareza e Coerência (2,0), Apresentação Visual (2,0) e Relação
-                Símbolos/Evangelhos.
+            <div class="card-turma" onclick="downloadPDF('8º ano 1ºbim 2026.pdf')">
+                <span>8º Ano</span> <span class="icon">📥</span>
             </div>
 
-            <div class="card-turma" onclick="toggle('f9')">
-                <span>9º Ano</span> <span class="icon">📄</span>
-            </div>
-            <div id="f9" class="info-panel">
-                <strong>Atividade:</strong> Unidade I - Preparo para o Céu.<br>
-                <strong>Critérios:</strong> Qualidade do documentário/vídeo (2,0) e Compreensão de conceitos.
+            <div class="card-turma" onclick="downloadPDF('9º ano 1ºBim 2026.pdf')">
+                <span>9º Ano</span> <span class="icon">📥</span>
             </div>
 
             <div class="category-label">ENSINO MÉDIO</div>
 
-            <div class="card-turma" onclick="toggle('m1')">
-                <span>1ª Médio</span> <span class="icon">📄</span>
-            </div>
-            <div id="m1" class="info-panel">
-                <strong>Atividade:</strong> O Reino de Deus (Módulo 2).<br>
-                <strong>Critérios:</strong> Conceitos (1,0), Temas (1,0) e Envolvimento nas atividades.
+            <div class="card-turma" onclick="downloadPDF('1º Médio 1ºbim 2026.pdf')">
+                <span>1ª Médio</span> <span class="icon">📥</span>
             </div>
 
-            <div class="card-turma" onclick="toggle('m2')">
-                <span>2ª Médio</span> <span class="icon">📄</span>
-            </div>
-            <div id="m2" class="info-panel">
-                <strong>Atividade:</strong> Quem é Deus / O Verbo era Deus.<br>
-                <strong>Critérios:</strong> Clareza, Organização e Profundidade das respostas.
+            <div class="card-turma" onclick="downloadPDF('2º Médio 1BIM 2026.pdf')">
+                <span>2ª Médio</span> <span class="icon">📥</span>
             </div>
 
-            <div class="card-turma" onclick="toggle('m3')">
-                <span>3ª Médio</span> <span class="icon">📄</span>
-            </div>
-            <div id="m3" class="info-panel">
-                <strong>Atividade:</strong> Mapa Mental - Problemas de Visão.<br>
-                <strong>Critérios:</strong> Conceitos corretos (3,0), Qualidade das imagens (3,0), Layout/Design (2,0) e
-                Uso da folha A4 (1,0).
+            <div class="card-turma" onclick="downloadPDF('3º Médio 1BIM 2026.pdf')">
+                <span>3ª Médio</span> <span class="icon">📥</span>
             </div>
 
         </div>
     </div>
 
     <script>
-        function toggle(id) {
-            const target = document.getElementById(id);
-            const isAlreadyActive = target.classList.contains('active');
+        function downloadPDF(fileName) {
+            // Cria um elemento de link temporário
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
 
-            // Fecha todas as outras abertas
-            document.querySelectorAll('.info-panel').forEach(panel => {
-                panel.classList.remove('active');
-            });
-
-            // Se não estava aberta, abre agora
-            if (!isAlreadyActive) {
-                target.classList.add('active');
-            }
+            // Adiciona ao corpo do documento, clica e remove
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 
