@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critérios Avaliativos 2026</title>
+    <style>
+        :root {
+            --blue-dark: #003358;
+            --blue-bright: #004a80;
+            --teal: #0097a7;
+            --bg-gray: #f4f7f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-gray);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Topo */
+        header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .logo {
+            max-width: 320px;
+            height: auto;
+        }
+
+        .title-section {
+            background-color: var(--blue-dark);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 10px solid var(--teal);
+        }
+
+        .title-section h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Grid */
+        .main-content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .category-label {
+            grid-column: 1 / -1;
+            color: var(--teal);
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        /* Botão da Turma com Efeito Azul */
+        .card-turma {
+            background: white;
+            border: 2px solid #e0e6ed;
+            border-radius: 8px;
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--blue-dark);
+            font-weight: 600;
+        }
+
+        /* EFEITO HOVER SOLICITADO */
+        .card-turma:hover {
+            background-color: var(--blue-dark);
+            color: white;
+            border-color: var(--blue-dark);
+            box-shadow: 0 4px 12px rgba(0, 51, 88, 0.3);
+        }
+
+        .icon {
+            font-size: 1.2rem;
+        }
+
+        /* Painel de Informações (Expandir) */
+        .info-panel {
+            display: none;
+            grid-column: 1 / -1;
+            background: #f8fbff;
+            border-left: 5px solid var(--teal);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: -10px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <img src="Santo André-horizontal.png" alt="Colégio Adventista Santo André" class="logo">
+        </header>
+
+        <div class="title-section">
+            <h1>Critérios Avaliativos</h1>
+            <span>1º Bimestre 2026</span>
+        </div>
+
+        <div class="main-content">
+
+            <div class="category-label">ENSINO FUNDAMENTAL II</div>
+
+            <div class="card-turma" onclick="toggle('f6')">
+                <span>6º Ano</span> <span class="icon">📄</span>
+            </div>
+            <div id="f6" class="info-panel">
+                <strong>Atividade:</strong> Pontilhismo (Artes).<br>
+                <strong>Critérios:</strong> Organização (2,5), Técnica (2,5), Ocupação da folha (2,5) e Pintura (2,5).
+            </div>
+
+            <div class="card-turma" onclick="toggle('f7')">
+                <span>7º Ano</span> <span class="icon">📄</span>
+            </div>
+            <div id="f7" class="info-panel">
+                <strong>Atividade:</strong> Construção de Vitral.<br>
+                <strong>Critérios:</strong> Uso de materiais (2,5), Acabamento (5,0) e Capricho (2,5).
+            </div>
+
+            <div class="card-turma" onclick="toggle('f8')">
+                <span>8º Ano</span> <span class="icon">📄</span>
+            </div>
+            <div id="f8" class="info-panel">
+                <strong>Atividade:</strong> Cartaz dos Quatro Evangelhos.<br>
+                <strong>Critérios:</strong> Clareza e Coerência (2,0), Apresentação Visual (2,0) e Relação
+                Símbolos/Evangelhos.
+            </div>
+
+            <div class="card-turma" onclick="toggle('f9')">
+                <span>9º Ano</span> <span class="icon">📄</span>
+            </div>
+            <div id="f9" class="info-panel">
+                <strong>Atividade:</strong> Unidade I - Preparo para o Céu.<br>
+                <strong>Critérios:</strong> Qualidade do documentário/vídeo (2,0) e Compreensão de conceitos.
+            </div>
+
+            <div class="category-label">ENSINO MÉDIO</div>
+
+            <div class="card-turma" onclick="toggle('m1')">
+                <span>1ª Médio</span> <span class="icon">📄</span>
+            </div>
+            <div id="m1" class="info-panel">
+                <strong>Atividade:</strong> O Reino de Deus (Módulo 2).<br>
+                <strong>Critérios:</strong> Conceitos (1,0), Temas (1,0) e Envolvimento nas atividades.
+            </div>
+
+            <div class="card-turma" onclick="toggle('m2')">
+                <span>2ª Médio</span> <span class="icon">📄</span>
+            </div>
+            <div id="m2" class="info-panel">
+                <strong>Atividade:</strong> Quem é Deus / O Verbo era Deus.<br>
+                <strong>Critérios:</strong> Clareza, Organização e Profundidade das respostas.
+            </div>
+
+            <div class="card-turma" onclick="toggle('m3')">
+                <span>3ª Médio</span> <span class="icon">📄</span>
+            </div>
+            <div id="m3" class="info-panel">
+                <strong>Atividade:</strong> Mapa Mental - Problemas de Visão.<br>
+                <strong>Critérios:</strong> Conceitos corretos (3,0), Qualidade das imagens (3,0), Layout/Design (2,0) e
+                Uso da folha A4 (1,0).
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggle(id) {
+            // Fecha as outras abertas para não poluir a tela
+            document.querySelectorAll('.info-panel').forEach(panel => {
+                if (panel.id !== id) panel.classList.remove('active');
+            });
+
+            // Abre ou fecha a clicada
+            const target = document.getElementById(id);
+            target.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
